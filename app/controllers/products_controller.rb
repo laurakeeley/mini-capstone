@@ -5,4 +5,14 @@ def all_products
   render json: product
 end
 
+def first_product
+  product = Product.first
+  render json: product  
+end
+
+def philodendron
+  product = Product.find_by(name: "philodendron")
+  render json: product
+end
+
 end
