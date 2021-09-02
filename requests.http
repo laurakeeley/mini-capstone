@@ -1,0 +1,29 @@
+GET http://localhost:3000/products
+
+###
+
+GET http://localhost:3000/products/2
+
+###
+
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Fiddle Leaf Fig",
+  "price": 60,
+  "description": "always dies"
+}
+
+###
+
+PATCH http://localhost:3000/products/6
+Content-Type: application/json
+
+{
+  "image": "1"
+}
+
+###
+
+DELETE http://localhost:3000/products/9
