@@ -10,9 +10,10 @@ POST http://localhost:3000/products
 Content-Type: application/json
 
 {
-  "name": "Fiddle Leaf Fig",
-  "price": 60,
-  "description": "always dies"
+  "name": "Peace Lily",
+  "price": 15,
+  "description": "easy to care for, droops when it needs water",
+  "supplier_id": 2
 }
 
 ###
