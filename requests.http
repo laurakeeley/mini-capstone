@@ -1,4 +1,7 @@
+@jwt = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2MzM3MTYzMTl9.1v13-oVWcig2mKtE85T-9dOQau1Y3Er3Yu7dArpWMM8
+
 GET http://localhost:3000/products
+Authorization: Bearer {{jwt}}
 
 ###
 
@@ -28,3 +31,47 @@ Content-Type: application/json
 ###
 
 DELETE http://localhost:3000/products/9
+
+### Users create (signup)
+
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "name": "Ruby",
+  "email": "ruby@gmail.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email": "alex@gmail.com",
+  "password": "password"
+}
+### Show all Orders
+
+GET http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+### Order create
+
+POST http://localhost:3000/orders
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
+
+{
+  "product_id": "8",
+  "quantity": "3"
+}
+
+### Show Order
+
+GET http://localhost:3000/orders/6
+Content-Type: application/json
+Authorization: Bearer {{jwt}}
